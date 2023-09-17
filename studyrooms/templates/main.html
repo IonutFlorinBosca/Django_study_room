@@ -1,0 +1,26 @@
+<!-- This is gonna allow me to create a wrapper around all my templates
+The app will have different styles for different pages, sections and
+I want to be able to include every little or different bit wherever I need it;
+encapsulate all the section of the project
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<!--Gonna use template inheritance(f.ex I can inherit the navbar, so that
+everytime I modify a link there it will be inherited in all the files)-->
+<body>
+<!-- This is where the tags will be created and all the other pages
+will inherit from-->
+    {% include 'navbar.html' %}
+    {% block content %}
+
+
+    {% endblock %}
+<!-- this code above will tell the website where to add all the child tags
+when I wrap a parent or another template in the website-->
+</body>
+</html>
+
